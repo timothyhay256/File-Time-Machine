@@ -1,0 +1,36 @@
+# .github/workflows/build.yml
+name: Build Windows
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build Windows
+    runs-on:  [self-hosted, windows]
+    steps:
+      - uses: actions/checkout@master
+      - name: Compile Rust
+        id: compile
+        run: |
+          cargo build --release
+      - name: Compile Python
+        run: |
+          pip install pyinstaller
+          cd gui; pyinstaller --add-data '*.png:.' --icon=logo.ico --onefile gui.py
+      - name: Move to build folder for Wix
+        run: |
+          mv target/release/ftm.exe build/ftm.exe
+          mv gui/dist/gui.exe build/gui.exe
+      - name: Create MSI
+        run: |
+          cd build; candle .\file-time-machine.wxs; light .\file-time-machine.wixobj
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Windows binaries and installer
+          path: |
+            build/file-time-machine.msi
+            build/ftm.exe
+            build/gui.exe
