@@ -19,7 +19,7 @@
 In order to start learning Rust, I decided to make a incremental snapshotting program, like Apples Time Machine, but in userspace and cross-platform. And so this is what this is. It allows you to take snapshots of folders, and restore these snapshots, allowing you to go backwards and forwards in time. So like Git, but easier to use, and less powerful. And with a messy codebase. And dangerous and data-loss prone. And slower. 
 ### Installation
 #### Linux
-Arch: Install `todo` from the AUR, or use Cargo. Optionally, install `todo-gui` as well.  
+Arch: Install `file-time-machine-bin` from the AUR, or use Cargo.
 Others: Use cargo to install `file-time-machine` or download the binary from releases. To get the GUI, download it from the releases page and run it with Python.
 #### Windows
 Download the .msi file from the releases page, and run it. The program and gui will both be installed, and the gui can be launched from the start menu.
