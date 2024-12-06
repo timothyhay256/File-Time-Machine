@@ -8,7 +8,6 @@
 
   [![Build Linux](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-linux.yml/badge.svg)](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-linux.yml)
   [![Build Windows](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-windows.yml/badge.svg)](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-windows.yml)
-  [![.github/workflows/build-release.yml](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-release.yml/badge.svg)](https://github.com/timothyhay256/File-Time-Machine/actions/workflows/build-release.yml)
   [![Codacy Badge](https://app.codacy.com/project/badge/Grade/fdf0d1f479f94373a7b4db0232e2d4aa)](https://app.codacy.com/gh/timothyhay256/File-Time-Machine/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
   ![No AI](https://img.shields.io/badge/free_of-AI_code-blue)
 </div>  
