@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="673E7C40-13A5-48E8-95DD-2E4872B32B76" Name="File Time Machine" Language="1033" Version="0.0.1" Manufacturer="we.stay-silly.org" UpgradeCode="1724CA8C-5325-4EBB-BE8F-57ADCB2CD4BB">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+    		<Directory Id="FileTimeMachine" Name="File Time Machine">
+            	    <Component Id="gui.exe" DiskId="1" Guid="374119a3-68b5-4fcd-b109-21ae3adcf652">
+                        <File Id="GUI.EXE" Name="gui.exe" Source=".\gui.exe">
+                            <Shortcut Id="ExeShortcut" Directory="ProgramMenuDir" Name="File Time Machine" Advertise="yes" Icon="StartMenuIcon.exe" IconIndex="0" />
+                        </File>
+                    </Component>
+                    <Component Id="ftm.exe" DiskId="1" KeyPath="yes" Guid="08e835c8-cb41-46e8-845a-c52215055a85">
+                        <File Id="FTM.EXE" Name="ftm.exe" Source=".\ftm.exe" />
+                    </Component>
+		</Directory>
+            </Directory>
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuDir" Name="File Time Machine">
+                    <Component Id="StartMenuShortcuts" Guid="873D56A9-4B5D-4C4E-865F-A2B1EDCCDEC5">
+                        <RemoveFolder Id="ProgramMenuDir" On="uninstall" />
+                        <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Type="string" Value="" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="gui.exe" />
+            <ComponentRef Id="ftm.exe" />
+            <ComponentRef Id="StartMenuShortcuts" />
+        </Feature>
+        <UI />
+        <Icon Id="StartMenuIcon.exe" SourceFile=".\gui.exe" />
+    </Product>
+</Wix>

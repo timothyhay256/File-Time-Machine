@@ -1,0 +1,45 @@
+[package]
+name = "file-time-machine"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mizuki Zou <purpledungeoncrab@protonmail.com"]
+description = "An unstable snapshotting backup cli tool"
+documentation = "https://git.timothyhay.org/public/File-time-machine"
+readme = "README.md"
+repository = "https://git.timothyhay.org/public/File-time-machine"
+license = "GPL-3.0"
+keywords = ["cli", "backup"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+sha2 = "0.10"    # SHA-256 implementation
+walkdir = "2"
+sha256 = "1.0.3"
+hex = "0.4"    # For encoding bytes to a hexadecimal string
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+directories = "5.0.1"
+bsdiff = "0.2.0"
+chrono = "0.4.38"
+indicatif = "0.17.8"
+inquire = "0.7.5"
+brotli = "6.0.0"
+num_cpus = "1.16.0"
+gumdrop = "0.8.1"
+log = "0.4.22"
+env_logger = "0.11.5"
+[dependencies.xxhash-rust]
+version = "0.8.5"
+features = ["xxh3", "const_xxh3"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+debug = 0
+
+[[bin]]
+name = "ftm"
+path = "src/main.rs"

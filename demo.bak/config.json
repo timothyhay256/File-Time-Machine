@@ -1,0 +1,10 @@
+[
+  {
+    "folder_path": "./demo",
+    "get_hashes": false,
+    "thread_count": 0,
+    "brotli_compression_level": 5,
+    "snapshot_mode": "fastest",
+    "its_my_fault_if_i_lose_data": true
+  }
+]
