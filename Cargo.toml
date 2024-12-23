@@ -29,7 +29,7 @@ gumdrop = "0.8.1"
 log = "0.4.22"
 env_logger = "0.11.5"
 [dependencies.xxhash-rust]
-version = "0.8.5"
+version = "0.8.13"
 features = ["xxh3", "const_xxh3"]
 
 [profile.release]
