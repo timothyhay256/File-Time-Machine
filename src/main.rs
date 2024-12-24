@@ -1,7 +1,4 @@
-// Made with pain by someone who desperately needed a distraction from the 2024 election.
-// Trans rights are human rights.
 // TODO: Optional exclude directories
-// TODO: Restore directly, don't restore intermediates.
 #![windows_subsystem = "windows"] // Prevents console from opening when on Windows.
 use chrono::DateTime;
 use directories::BaseDirs;
