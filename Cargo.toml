@@ -18,7 +18,7 @@ sha256 = "1.0.3"
 hex = "0.4"    # For encoding bytes to a hexadecimal string
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-directories = "5.0.1"
+directories = "6.0.0"
 bsdiff = "0.2.0"
 chrono = "0.4.39"
 indicatif = "0.17.9"
