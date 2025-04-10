@@ -14,7 +14,7 @@ categories = ["command-line-utilities"]
 [dependencies]
 sha2 = "0.10"    # SHA-256 implementation
 walkdir = "2"
-sha256 = "1.0.3"
+sha256 = "1.6.0"
 hex = "0.4"    # For encoding bytes to a hexadecimal string
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
